@@ -569,9 +569,11 @@ $(BUILD)/firmware.bin: $(BUILD)/firmware.elf
 	$(Q)$(OBJCOPY) -O binary -j .text -j .data $^ $(BUILD)/firmware.bin
 	$(Q)$(OBJCOPY) -O binary -j .spim $^ $(BUILD)/firmware_spim.bin
 ifeq ($(MICROPY_LVGL),1)
+	mkdir -p ../build/$(BOARD)/WithLittlevGL
 	cp $(BUILD)/firmware.bin ../build/$(BOARD)/WithLittlevGL/
 	cp $(BUILD)/firmware_spim.bin ../build/$(BOARD)/WithLittlevGL/
 else
+	mkdir -p ../build/$(BOARD)
 	cp $(BUILD)/firmware.bin ../build/$(BOARD)/
 endif
 test: $(BUILD)/firmware.elf

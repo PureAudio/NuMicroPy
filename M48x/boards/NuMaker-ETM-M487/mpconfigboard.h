@@ -8,8 +8,6 @@
 #define MICROPY_HW_I2C0_SDA (pin_G1)
 #define MICROPY_HW_I2C1_SCL (pin_A3)
 #define MICROPY_HW_I2C1_SDA (pin_A2)
-#define MICROPY_HW_I2C2_SCL (pin_D1)
-#define MICROPY_HW_I2C2_SDA (pin_D0)
 
 
 // SPI busses

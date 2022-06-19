@@ -564,7 +564,7 @@ void USBD_IRQHandler(void)
 	IRQ_EXIT(USBD_IRQn);
 }
 
-volatile uint32_t g_ECC_done, g_ECCERR_done;
+extern volatile uint32_t g_ECC_done, g_ECCERR_done;
 volatile int  g_Crypto_Int_done = 0;
 
 void CRYPTO_IRQHandler()
