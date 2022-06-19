@@ -77,12 +77,10 @@
 #define MICROPY_HW_LED0_NAME		"led0"
 #define MICROPY_HW_LED1_NAME		"led1"
 #define MICROPY_HW_LED2_NAME		"led2"
-#define MICROPY_HW_LEDRGB_NAME		"rgb"
 
 #define MICROPY_HW_LED0             (pin_H0) // red
 #define MICROPY_HW_LED1             (pin_H1) // yellow
 #define MICROPY_HW_LED2             (pin_H2) // green
-#define MICROPY_HW_LEDRGB           (pin_B8) // A2, SPI MOSI pin. Using SPI to drive serial RGB LEB
 
 #define MICROPY_HW_LED_OFF(pin)     (mp_hal_pin_high(pin))
 #define MICROPY_HW_LED_ON(pin)     	(mp_hal_pin_low(pin))
